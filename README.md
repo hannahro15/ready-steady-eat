@@ -30,3 +30,13 @@
 - As a user, I want be able to see the FAQ page, so I can find out the relevant information to any queries or general information that I may need.
 - As a user, I want to be able contact the company on the contact us page, so I can request inforamtion that I need or ask general queries.
 - As a user, I want to be able to view various offers and subscriptions listed on the home page, so I can decide whether to go ahead with using any of them before I purchase any items.
+
+## Wireframes 
+### Products Page - Mobile
+![Products Page - Mobile](wireframes/products-page-mobile.png)
+### Products Page - Desktop
+![Products Page - Desktop](wireframes/products-page-desktop.png)
+### Product Details Page - Mobile
+![Product Details Page - Mobile](wireframes/product-details-page-mobile.png)
+### Product Details Page - Desktop
+![Product Details page - Mobile](wireframes/products-page-desktop.png)
