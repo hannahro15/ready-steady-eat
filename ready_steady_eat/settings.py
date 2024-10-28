@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+if os.path.isfile('envy.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,10 +29,6 @@ SECRET_KEY = 'django-insecure-hz4)nk**&yzb^vb0kdmd23og)z)s7_%h&vprg#2vu)%o(++niu
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net']
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net",
-]
 
 # Application definition
 
