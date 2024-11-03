@@ -35,3 +35,27 @@ html {
 .search-bar {
     padding-right: 20px;
 }
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.product-container {
+    margin-top: 10%;
+}
+
+.product-container .row {
+    text-align: center;
+}
+
+.card .card-img-top {
+    height: 120px;
+    width: auto;
+    margin: 0 auto;
+}
