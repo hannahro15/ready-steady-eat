@@ -1,0 +1,1 @@
+web: gunicorn ready-steady-eat.wsgi:application

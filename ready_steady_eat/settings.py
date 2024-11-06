@@ -30,7 +30,7 @@ DEBUG = True
 
 DISABLE_COLLECTSTATIC = 1
 
-ALLOWED_HOSTS = ['8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net', '']
+ALLOWED_HOSTS = ['ready-steady-eat-8febfd678f9f.herokuapp.com', 'localhost']
 
 # Application definition
 
@@ -106,12 +106,17 @@ WSGI_APPLICATION = 'ready_steady_eat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
