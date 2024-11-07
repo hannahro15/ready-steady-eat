@@ -59,3 +59,13 @@ html {
     width: auto;
     margin: 0 auto;
 }
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
