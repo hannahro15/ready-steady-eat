@@ -69,7 +69,7 @@
                         </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                href="">
+                                href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
                                     <p class="my-0">
@@ -119,20 +119,6 @@
                                       <li><a class="dropdown-item" href="#">Contact</a></li>
                                       <li><a class="dropdown-item" href="#">FAQ</a></li>
                                     </ul>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                                        <div class="text-center">
-                                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                            <p class="my-0">
-                                                {% if grand_total %}
-                                                    ${{ grand_total|floatformat:2 }}
-                                                {% else %}
-                                                    $0.00
-                                                {% endif %}
-                                            </p>
-                                        </div>
-                                    </a>
                                 </li>
                             </ul>
                         </div>
