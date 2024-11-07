@@ -104,11 +104,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                       <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
-                                      <li><a class="dropdown-item" href="#">Nibbles</a></li>
-                                      <li><a class="dropdown-item" href="#">Starters</a></li>
-                                      <li><a class="dropdown-item" href="#">Main Courses</a></li>
-                                      <li><a class="dropdown-item" href="#">Desserts</a></li>
-                                      <li><a class="dropdown-item" href="#">Party Food</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'products' %}?category=nibbles">Nibbles</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'products' %}?category=starters">Starters</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'products' %}?category=main_courses">Main Courses</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'products' %}?category=desserts">Desserts</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'products' %}?category=party_food">Party Food</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item text-uppercase dropdown"></li>
