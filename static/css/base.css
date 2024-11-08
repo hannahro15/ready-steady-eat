@@ -7,6 +7,10 @@ html {
 
 }
 
+.main-logo-link {
+    width: fit-content;
+}
+
 .logo-image {
     width: 120px;
     height: auto;
