@@ -86,6 +86,11 @@ html {
     margin: 0 auto;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
