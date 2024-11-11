@@ -40,3 +40,7 @@
 ![Product Details Page - Mobile](wireframes/product-details-page-mobile.png)
 ### Product Details Page - Desktop
 ![Product Details page - Mobile](wireframes/products-page-desktop.png)
+### Checkout Page - Mobile
+![Checkout Page - Mobile](wireframes/checkout-page-mobile.png)
+### Checkout Page - Desktop
+![Checkout Page - Desktop](wireframes/checkout-page-desktop.png)
