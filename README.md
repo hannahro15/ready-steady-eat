@@ -32,6 +32,10 @@
 - As a user, I want to be able to view various offers and subscriptions listed on the home page, so I can decide whether to go ahead with using any of them before I purchase any items.
 
 ## Wireframes 
+### Home Page - Mobile
+![Home Page - Mobile](wireframes/home-page-mobile.png)
+### Home Page - Desktop
+![Home Page - Desktop](wireframes/home-page-desktop.png)
 ### Products Page - Mobile
 ![Products Page - Mobile](wireframes/products-page-mobile.png)
 ### Products Page - Desktop
