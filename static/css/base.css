@@ -4,7 +4,6 @@ html {
 
 .main-heading {
     font-family: sans-serif;
-
 }
 
 .main-logo-link {
@@ -66,18 +65,9 @@ html {
     color: white;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 .product-container {
-    margin-top: 10%;
+    margin-top: 20%;
+    border: solid 1px black;
 }
 
 .product-container .row {
@@ -93,6 +83,16 @@ html {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+    .header-container {
+          padding-top: 164px;
+    }
 }
 
 @media (max-width: 991px) {
