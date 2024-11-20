@@ -13,6 +13,7 @@ html {
 .logo-image {
     width: 120px;
     height: auto;
+    margin: 0 auto;
 }
 
 .icon {
@@ -39,32 +40,6 @@ html {
     padding-right: 20px;
 }
 
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
 .product-container {
     margin-top: 20%;
     border: solid 1px black;
@@ -83,24 +58,4 @@ html {
 .update-link,
 .remove-item {
     cursor: pointer;
-}
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-    .header-container {
-          padding-top: 164px;
-    }
-}
-
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
 }
