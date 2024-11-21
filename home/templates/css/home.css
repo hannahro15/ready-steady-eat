@@ -1,13 +1,16 @@
-.home-image {
-    width: 90%;
+.home-title {
+   padding-top: 20px;
+}
+
+.home-image img {
+    width: 5rem;
     height: auto;
     margin: 0 auto;
-    margin-left: 10px;
+    padding-left: 10px;
     margin-right:10px;
 }
 
 .home-paragraph {
-    width: 70%;
-    margin: 0 auto;
+    padding: 20px 20px;
 }
 
