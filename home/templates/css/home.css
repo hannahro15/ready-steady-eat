@@ -1,9 +1,13 @@
 .home-image {
-    width: 50px;
+    width: 90%;
     height: auto;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right:10px;
 }
 
 .home-paragraph {
     width: 70%;
     margin: 0 auto;
 }
+
