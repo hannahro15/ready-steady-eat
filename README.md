@@ -48,3 +48,11 @@
 ![Checkout Page - Mobile](wireframes/checkout-page-mobile.png)
 ### Checkout Page - Desktop
 ![Checkout Page - Desktop](wireframes/checkout-page-desktop.png)
+### Contact Page - Mobile
+![Contact Page - Mobile](wireframes/contact-mobile.png)
+### Contact Page - Desktop
+![Contact Page - Desktop](wireframes/contact-desktop.png)
+### FAQ Page - Mobile
+![FAQ Page - Mobile](wireframes/faq-mobile.png)
+### FAQ Page - Desktop
+![FAQ Page - Desktop](wireframes/faq-desktop.png)
