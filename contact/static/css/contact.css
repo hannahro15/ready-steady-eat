@@ -1,0 +1,9 @@
+form .input {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+      width: 80%;
+    }
+  }
