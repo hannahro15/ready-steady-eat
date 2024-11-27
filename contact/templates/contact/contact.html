@@ -4,33 +4,28 @@
 
 {% block content %}
   <h1 class="text-center page-titles">Contact Us</h1>
-  <p class="text-center page-subtitles">Please contact us if you have any queries regarding our text-speech app.</p>
+  <p class="text-center page-subtitles">Please contact us if you have any queries regarding our online store.</p>
 
   <form id="contactForm">
     <div class="col fw-bold">
-      <label for="firstName" class="form-label">First Name: </label>
       <input type="text" class="form-control" id="firstName" placeholder="First name" required>
     </div>
     <div class="col fw-bold">
-      <label for="lastName" class="form-label">Last Name: </label>
       <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
     </div>
     <div class="col fw-bold">
-      <label for="email" class="form-label">Email address: </label>
       <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
     </div>
     <div class="col fw-bold">
-        <label for="phone" class="form-label">Phone number: </label>
         <input type="phone" class="form-control" id="phone" placeholder="name@example.com" required>
-      </div>
+    </div>
     <div class="mb-3 fw-bold">
-      <label for="text-area" class="form-label">Please post your comment/s below: </label>
       <textarea class="form-control" id="text-area" placeholder="Please fill in any comments here..."
                 rows="5" required></textarea>
     </div>
     <div>
       <button type="submit" class="submit_button btn btn-custom-text"
-              id="submitButton">Submit form</button>
+              id="submitButton">Submit</button>
     </div>
   </form>
 {% endblock content %}
