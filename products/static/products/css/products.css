@@ -1,5 +1,5 @@
-.product-container .card .card-img-top {
+.product-container .card .card-body .card-img-top {
     height: 100px;
-    width: auto;
-    text-align: center;
+    width: 100px;
+    object-fit: cover;
 }
