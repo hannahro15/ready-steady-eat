@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  <div class="container">
+    <h1 class="text-center page-titles">
+      Frequently Asked Questions
+    </h1>
+    <p class="text-center page-subtitles">
+      Find all of your most frequently asked questions below.
+    </p>
+    <div class="row">
+      {% for faq in faq_list %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 faq-card">
+            <div class="card-body">
+              <h2 class="card-title">
+                QUESTION:
+              </h2>
+              <p class="card-text">
+                {{ faq.question }}
+              </p>
+              <h2 class="card-title">
+                ANSWER:
+              </h2>
+              <p class="card-text">
+                {{ faq.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
