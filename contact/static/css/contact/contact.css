@@ -7,3 +7,7 @@ input {
       width: 80%;
     }
   }
+
+  .faq-card {
+    margin: 10px;
+  }
