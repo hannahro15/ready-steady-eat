@@ -6,4 +6,5 @@ def contact(request):
 
 
 def faq(request):
-    return render(request, 'contact/faq.html')
+    faq_list = Faq.objects.all()
+    return render(request, 'contact/faq.html', {'faq_list': faq_list})
