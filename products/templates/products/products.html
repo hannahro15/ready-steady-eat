@@ -14,7 +14,6 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
-            <hr class="w-50 mb-1">
         </div>
     </div>
     <div class="row">
@@ -23,28 +22,16 @@
             <div class="row">
                 {% for product in products %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card card-body h-100 border-0">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="" alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col card-footer">
-                                <p class="lead mb-0 text-left font-weight-bold">Serves: {{ product.serving }}</p>
+                        <div class="card card-body border-0">
+                            <div class="card-img">
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid object-fit-cover border rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                            </div>  
+                            <div class="product-info">
+                                <p class="fw-bold text-uppercase">{{ product.name }}</p>
+                                <p class="fw-bold">Price: £{{ product.price }}</p>
+                                <p class="fw-bold">Serves: {{ product.serving }}</p>
                             </div>
                         </div>
                     </div>

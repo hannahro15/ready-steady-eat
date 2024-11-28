@@ -16,7 +16,7 @@
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid object-fit-cover border rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
@@ -27,10 +27,10 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="mt-3">{{ product.description }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                    <p class="mt-3">{{ product.serving }}</p>
+                    <p class="mb-0 fw-bold text-uppercase">{{ product.name }}</p>
+                    <p class="mt-3 fst-italic">{{ product.description }}</p>
+                    <p class="mb-0 text-left fw-bold">Price: £{{ product.price }}</p>
+                    <p class="mt-3 fw-bold">Serves: {{ product.serving }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
