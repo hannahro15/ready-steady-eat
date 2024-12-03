@@ -167,11 +167,34 @@
   {% block content %}
   {% endblock %}
 
+  <footer class="d-block w-100">
+    <!--Social links-->
+    <section class="social-container d-block text-center">
+      <h4 class="social-title text-uppercase pt-10">Social Media Links</h4>
+      <div id="social-links">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+      <div id="copyright-statement">
+        <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
+      </div>
+    </section>
+  </footer>
+
   {% block postloadjs %}
   <script type="text/javascript">
     $('.toast').toast('show');
   </script>
   {% endblock %}
 </body>
-
 </html>
