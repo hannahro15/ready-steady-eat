@@ -24,9 +24,13 @@
 {% block corejs %}
   <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include Popper.js (required for positioning) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Stripe --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
@@ -52,7 +56,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 d-flex justify-content-center justify-content-lg-end">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-user fa-lg text-dark"></i></div>
@@ -103,7 +107,7 @@
                 </li>
                 <li class="nav-item text-uppercase dropdown text-light">
                   <a class="nav-link text-light dropdown-toggle" href="{% url 'products' %}" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                    data-toggle="dropdown" aria-expanded="false">
                     All Products
                   </a>
                   <ul class="dropdown-menu">
@@ -117,7 +121,7 @@
                   </ul>
                 </li>
                     <li>
-                      <a class="nav-link text-uppercase text-light fw-bold" href="{% url 'contact' %}">Contact</a>
+                      <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li>
                       <a class="nav-link text-uppercase text-light fw-bold" href="{% url 'faq_page' %}">FAQ's</a>
