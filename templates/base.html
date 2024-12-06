@@ -63,7 +63,7 @@
                 <p class="my-0 text-dark">My Account</p>
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-5" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -111,13 +111,13 @@
                     All Products
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}">All Products</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=nibbles">Nibbles</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=starters">Starters</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=main_courses">Main Courses</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=sides">Sides</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=desserts">Desserts</a></li>
-                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=party_food">Party Food</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}">All Products</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=nibbles">Nibbles</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=starters">Starters</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=main_courses">Main Courses</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=sides">Sides</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=desserts">Desserts</a></li>
+                    <li><a class="dropdown-item text-dark" href="{% url 'products' %}?category=party_food">Party Food</a></li>
                   </ul>
                 </li>
                     <li>
