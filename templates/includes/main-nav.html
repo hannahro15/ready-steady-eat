@@ -1,0 +1,40 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item text-uppercase bg-light">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item text-uppercase dropdown bg-light">
+            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                All Products
+            </a>
+            <ul class="dropdown-menu bg-light">
+                <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=nibbles">Nibbles</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=starters">Starters</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=main_courses">Main Courses</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=sides">Sides</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=desserts">Desserts</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=party_food">Party Food</a></li>
+            </ul>
+        </li>
+        <li class="nav-item text-uppercase bg-light">
+            <a class="nav-link text-uppercase fw-bold" href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li class="nav-item text-uppercase bg-light">
+            <a class="nav-link text-uppercase fw-bold" href="{% url 'faq_page' %}">FAQ's</a>
+        </li>
+    </ul>
+</div>
+
+<form method="GET" action="">
+    <div class="search-bar input-group w-100">
+        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site" />
+        <div class="input-group-append">
+            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                <span class="icon">
+                    <i class="fas fa-search"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>

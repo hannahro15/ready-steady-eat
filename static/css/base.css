@@ -28,6 +28,7 @@ html {
     background-color: green;
     width: 100%;
     border: solid 1px black;
+    color: white;
 }
 
 .nav-item {
@@ -43,6 +44,10 @@ html {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+.home-container {
+    min-height: 100px;
 }
 
 /* ------------------------------- Bootstrap Toasts */
@@ -171,7 +176,7 @@ html {
 
 footer {
     margin-top: auto;
-    height: 10rem;
+    height: 8rem;
     background-color: green;
     color: white;
 }
