@@ -22,19 +22,16 @@ html {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: black;
+}
+
+.fa fa-shopping-bag fa-lg {
+    color: black !important;
 }
 
 .navbar {
     background-color: green;
     width: 100%;
-    border: solid 1px black;
-    color: white;
-}
-
-.nav-item {
-    font-weight: bold;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .search-bar {
@@ -175,31 +172,20 @@ html {
 /* ------ Footer----- */
 
 footer {
-    margin-top: auto;
-    height: 8rem;
     background-color: green;
-    color: white;
 }
 
 .social-container {
-    margin-left: 10px;
     margin-top: 5px;
 }
 
 .social-title {
     font-weight: bold;
     font-size: 15px;
-    padding-top: 15px;
-}
-
-#social-links > i {
-    text-decoration: none;
-    color: white;
 }
 
 #copyright-statement {
     font-size: 10px;
-    color: white;
 }
 
 /* Product Form */

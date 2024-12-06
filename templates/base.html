@@ -1,7 +1,6 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   {% block meta %}
@@ -26,8 +25,10 @@
   <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <!-- Stripe -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Stripe --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
 
@@ -54,8 +55,8 @@
             <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <div><i class="fas fa-user fa-lg text-dark"></i></div>
+                <p class="my-0 text-dark">My Account</p>
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -72,28 +73,74 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+            <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link"
               href="{% url 'view_bag' %}">
               <div class="text-center">
-                <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
-                <p class="my-0">
-                  {% if grand_total %} £{{ grand_total|floatformat:2 }}
-                  {% else %} £0.00 {% endif %}
+                <div><i class="fa fa-shopping-bag fa-lg text-dark"></i></div>
+                <p class="my-0 text-dark">
+                  {% if grand_total %}
+                  £{{ grand_total|floatformat:2 }}
+                  {% else %}
+                  £0.00
+                  {% endif %}
                 </p>
               </div>
             </a>
           </li>
         </ul>
       </div>
-    </div>
-    <div class="row bg-white">
-      <nav class="navbar navbar-expand-lg navbar-light w-100">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="row w-100">
+        <nav class="navbar navbar-expand-md col-lg-12">
+          <div class="container-fluid h-100 w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-          </button>
-          {% include 'includes/main-nav.html' %}
-      </nav>
-  </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item text-uppercase text-light">
+                  <a class="nav-link text-light active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item text-uppercase dropdown text-light">
+                  <a class="nav-link text-light dropdown-toggle" href="{% url 'products' %}" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    All Products
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}">All Products</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=nibbles">Nibbles</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=starters">Starters</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=main_courses">Main Courses</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=sides">Sides</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=desserts">Desserts</a></li>
+                    <li><a class="dropdown-item text-light" href="{% url 'products' %}?category=party_food">Party Food</a></li>
+                  </ul>
+                </li>
+                    <li>
+                      <a class="nav-link text-uppercase text-light fw-bold" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li>
+                      <a class="nav-link text-uppercase text-light fw-bold" href="{% url 'faq_page' %}">FAQ's</a>
+                    </li>
+                </ul>
+              </ul>
+            </div>
+            <form method="GET" action="">
+              <div class="search-bar input-group w-100">
+                <input class="form-control border border-black rounded-0" type="text" name="q"
+                  placeholder="Search our site">
+                <div class="input-group-append">
+                  <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                    <span class="icon">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
   </header>
 
   {% if messages %}
@@ -120,28 +167,26 @@
   {% block content %}
   {% endblock %}
 
-  <footer class="d-block w-100">
-    <!--Social links-->
-    <section class="social-container d-block text-center">
-      <h4 class="social-title text-uppercase pt-10">Social Media Links</h4>
+  <footer class="d-block w-100 social-container d-block text-center">
+    <!--Social links--->
+      <h4 class="social-title text-uppercase">Social Media Links</h4>
       <div id="social-links">
         <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
-          <i class="fa-brands fa-facebook"></i>
+          <i class="fa fa-facebook text-light"></i>
         </a>
         <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page">
-          <i class="fa-brands fa-twitter"></i>
+          <i class="fa fa-twitter text-light"></i>
         </a>
         <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page">
-          <i class="fa-brands fa-instagram"></i>
+          <i class="fa fa-instagram text-light"></i>
         </a>
         <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel">
-          <i class="fa-brands fa-youtube"></i>
+          <i class="fa fa-youtube text-light"></i>
         </a>
       </div>
       <div id="copyright-statement">
         <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
       </div>
-    </section>
   </footer>
 
   {% block postloadjs %}
