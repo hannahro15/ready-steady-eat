@@ -20,15 +20,14 @@ def edit_faq(request, faq_id):
         form = FaqForm(request.POST, request.FILES, instance=faq)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('faq_page', args=[faq.id]))
+            messages.success(request, 'Successfully updated FAQ!')
+            return redirect('faq_page')
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update FAQ. Please ensure the form is valid.')
     else:
         form = FaqForm(instance=faq)
-        messages.info(request, f'You are editing {faq.id}')
 
-    template = 'products/edit_product.html'
+    template = 'faq/edit_faq.html'
     context = {
         'form': form,
         'faq': faq,
@@ -43,9 +42,9 @@ def delete_faq(request, faq_id):
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('delete_faq'))
+        return redirect('faq_page')
 
-    product = get_object_or_404(Product, pk=product_id)
-    product.delete()
+    faq = get_object_or_404(Faq, pk=faq_id)
+    faq.delete()
     messages.success(request, 'FAQ deleted!')
-    return redirect(reverse('faq_page'))
+    return redirect('faq_page')
