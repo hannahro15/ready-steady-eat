@@ -28,8 +28,10 @@
               <p class="card-text">
                 {{ faq.answer }}
               </p>
-              <button class="btn btn-warning rounded-0" type="submit">Edit</button>
-              <button class="btn btn-secondary rounded-0" type="submit">Delete</button>
+              {% if request.user.is_superuser %}
+                <a class="btn btn-warning rounded-0" href="{% url 'edit_faq' faq.id %}">Edit</a>
+                <a class="text-danger" href="{% url 'delete_faq' faq.id %}">Delete</a>
+              {% endif %}
             </div>
           </div>
         </div>
