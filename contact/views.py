@@ -14,6 +14,32 @@ def faq_page(request):
     return render(request, 'contact/faq.html', {'faq_list': faq_list})
 
 
+@login_required
+def add_faq(request):
+    """ Add FAQ """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('faq_page'))
+
+    if request.method == 'POST':
+        form = FaqForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added FAQ!')
+            return redirect(reverse('faq_page', args=[faq.id]))
+        else:
+            messages.error(request, 'Failed to add faq. Please ensure the form is valid.')
+    else:
+        form = FaqForm()
+
+    template = 'contact/add_faq.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
 def edit_faq(request, faq_id):
     """ Edit an faq """
     faq = get_object_or_404(Faq, pk=faq_id)
