@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from .models import Faq
+from .forms import FaqForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -27,7 +28,7 @@ def edit_faq(request, faq_id):
     else:
         form = FaqForm(instance=faq)
 
-    template = 'faq/edit_faq.html'
+    template = 'contact/edit_faq.html'
     context = {
         'form': form,
         'faq': faq,
