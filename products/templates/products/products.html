@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -21,27 +21,28 @@
             <div class="row mt-1 mb-2"></div>
             <div class="row">
                 {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card card-body border-0">
-                            <div class="card-img">
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid object-fit-cover border rounded" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                            </div>  
-                            <div class="product-info">
-                                <p class="fw-bold text-uppercase">{{ product.name }}</p>
-                                <p class="fw-bold">Price: £{{ product.price }}</p>
-                                <p class="fw-bold">Serves: {{ product.serving }}</p>
-                            </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card card-body border-0">
+                        <div class="card-img">
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid object-fit-cover border rounded"
+                                    src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <p class="fw-bold text-uppercase">{{ product.name }}</p>
+                            <p class="fw-bold">Price: £{{ product.price }}</p>
+                            <p class="fw-bold">Serves: {{ product.serving }}</p>
                         </div>
                     </div>
-                {% endfor %}
-                {% if request.user.is_superuser %}
+                    {% if request.user.is_superuser %}
                     <small class="ml-3">
-                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                     </small>
-                {% endif %}
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
