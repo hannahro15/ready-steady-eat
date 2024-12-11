@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Faq
 from .forms import FaqForm
 from django.contrib import messages
@@ -26,7 +26,7 @@ def add_faq(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added FAQ!')
-            return redirect(reverse('faq_page', args=[faq.id]))
+            return redirect('faq_page')
         else:
             messages.error(request, 'Failed to add faq. Please ensure the form is valid.')
     else:

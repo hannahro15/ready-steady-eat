@@ -29,15 +29,17 @@
                 {{ faq.answer }}
               </p>
               {% if request.user.is_superuser %}
-                <button class="btn btn-warning rounded-0" href="{% url 'edit_faq' faq.id %}">Edit</button>
-                <button class="text-danger" href="{% url 'delete_faq' faq.id %}">Delete</button>
+                <button class="btn btn-warning" href="{% url 'edit_faq' faq.id %}">Edit</button>
+                <button class="btn btn-danger" href="{% url 'delete_faq' faq.id %}">Delete</button>
               {% endif %}
             </div>
           </div>
         </div>
       {% endfor %}
       {% if request.user.is_superuser %}
-      <button class="btn btn-secondary rounded-0" href="{% url 'add_faq' %}">Add FAQ</button>
+        <div>
+           <a class="btn btn-dark" href="{% url 'add_faq' %}">+ Add FAQ</a>
+        </div>
       {% endif %}
     </div>
   </div>
