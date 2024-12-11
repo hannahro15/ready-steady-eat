@@ -3,8 +3,7 @@ input {
 }
 
 .add_faq-btn {
-    margin-left: 20%;
-
+    margin-left: 100px;
 }
 
 @media only screen and (min-width: 600px) {
