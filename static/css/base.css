@@ -2,6 +2,12 @@ html {
     height: 100%;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
 .main-heading {
     font-family: sans-serif;
 }
@@ -172,7 +178,9 @@ html {
 /* ------ Footer----- */
 
 footer {
+    margin-top: auto;
     background-color: green;
+    min-height: 50px;
 }
 
 .social-container {

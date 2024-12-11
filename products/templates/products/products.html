@@ -30,9 +30,9 @@
                             </a>
                         </div>
                         <div class="product-info">
-                            <p class="fw-bold text-uppercase">{{ product.name }}</p>
-                            <p class="fw-bold">Price: £{{ product.price }}</p>
-                            <p class="fw-bold">Serves: {{ product.serving }}</p>
+                            <p class="text-uppercase font-weight-bold">{{ product.name }}</p>
+                            <p><strong>Price: </strong>£{{ product.price }}</p>
+                            <p><strong>Serves: </strong>{{ product.serving }}</p>
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
