@@ -27,8 +27,8 @@
                     {% csrf_token %}
                     {{ form.as_p }}
                     <div class="text-right">
-                        <button class="btn btn-outline-black rounded-0" href="{% url 'edit_faq' faq.id %}">Cancel</button>
-                        <button class="btn btn-black rounded-0" type="submit">Update FAQ</button>
+                        <a class="btn btn-danger" href="{% url 'faq_page' %}">Cancel</a>
+                        <button class="btn btn-dark" type="submit">Update FAQ</button>
                     </div>
                 </form>
             </div>            
