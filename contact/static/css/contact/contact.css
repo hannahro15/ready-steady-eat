@@ -1,3 +1,27 @@
+div .row .card-container {
+  margin: 10px;
+}
+
+.card-container {
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  min-height: 500vh;
+}
+
+#contactForm {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  margin-bottom: 20px;
+}
+
+#contact-container {
+  min-height: 500px;
+}
+
 input {
     margin-bottom: 10px;
 }

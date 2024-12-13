@@ -41,8 +41,6 @@
 
   <title>Ready, Steady, Eat! {% block extra_title %}{% endblock %}</title>
 </head>
-
-<body>
   <header class="container-fluid">
     <div id="topnav" class="row bg-white pt-lg-2">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-start">
@@ -165,12 +163,13 @@
   </div>
   {% endif %}
 
+<body>
   {% block content %}
   {% endblock %}
-
-  <footer class="d-block w-100 social-container d-block text-center">
+</body>
+  <footer class="d-block w-100 text-center">
     <!--Social links--->
-      <h4 class="social-title text-uppercase">Social Media Links</h4>
+      <h4 class="social-title text-uppercase text-light pt-10">Social Media Links</h4>
       <div id="social-links">
         <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page">
           <i class="fa fa-facebook text-light"></i>
@@ -185,7 +184,7 @@
           <i class="fa fa-youtube text-light"></i>
         </a>
       </div>
-      <div id="copyright-statement">
+      <div class="copyright-statement text-light">
         <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
       </div>
   </footer>
@@ -195,5 +194,4 @@
     $('.toast').toast('show');
   </script>
   {% endblock %}
-</body>
 </html>
