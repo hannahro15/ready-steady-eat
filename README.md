@@ -1,6 +1,6 @@
 # Online Food Shop Project (Milestone 4)
  
- An online food shop that sells meals and fresh food products.
+ An online food shop called Ready, Steady, Eat! that sells meals and fresh food products.
 
  # UX
 
@@ -56,6 +56,236 @@
 ![FAQ Page - Mobile](wireframes/faq-mobile.png)
 ### FAQ Page - Desktop
 ![FAQ Page - Desktop](wireframes/faq-desktop.png)
+
+## Database Schema
+
+# Features
+
+## Home Page
+
+![Home Page]()
+
+A home page introducing the website and it's purpose for users.
+
+## All Products Page
+
+![All Products Page]()
+
+A page where all the products are shown.
+
+## Individual Product Pages
+
+![Nibbles]()
+![Starters]()
+![Main Courses]()
+![Sides]()
+![Desserts]()
+![Party Food]()
+
+Pages where products for different categories are shown.
+
+## My Basket Page
+
+![My Basket]()
+
+A page where users can see their items before going to the checkout page.
+
+## Checkout Page
+
+![Checkout Page]()
+
+Where users checkout and pay for items.
+
+## Contact Page
+
+![Contact Page]()
+
+Where users can contact Ready, Steady, Eat! with queries.
+
+## FAQ Page
+
+![FAQ Page]()
+
+Where users can see frequently asked questions. There are options from this page for admin's to add, edit and remove faq's.
+
+## My Profile Page
+
+![Profile Page]()
+
+Where you users have access to their own profile.
+
+## Product Management Page
+
+![Product Management page]()
+
+Where the admins are can manage products in the shop.
+
+## Future Features
+
+- Add a rating and reviews system
+- Add in more products to the site
+- Add a wishist
+- Set up a subscribe field for a monthly newsletter
+
+# Testing
+
+## Bugs
+
+### Fixed bugs 
+
+- Fixed footer being at the bottom of the page.
+- Made images all the same size so it looks more uniform in the product containers
+
+### Unfixed bugs 
+
+- Images a little slow loading the page.
+- Footer overlapping content in page on some pages.
+
+## Validation
+
+### HTML Validation
+
+![]()
+
+### CSS Validation
+
+![]()
+
+### JS Validation
+
+![]()
+
+### Python Validation
+
+![]()
+
+## Google Lighthouse Testing
+
+## Home Page - Mobile
+
+![Home Page - Mobile]()
+
+## Home Page - Desktop
+
+![Home Page - Desktop]()
+
+## All Products Page - Mobile
+
+![All Products Page - Mobile]()
+
+## All Products Page - Desktop
+
+![All Products Page - Desktop]()
+
+## My Basket Page - Mobile
+
+![My Basket - Mobile]()
+
+## My Basket Page - Desktop
+
+![My Basket - Desktop]()
+
+## Checkout Page - Mobile
+
+![Checkout Page - Mobile]()
+
+## Checkout Page - Desktop
+
+![Checkout Page - Desktop]()
+
+## Contact Page - Mobile
+
+![Contact Page - Mobile]()
+
+## Contact Page - Desktop
+
+![Contact Page - Desktop]()
+
+## FAQ Page - Mobile
+
+![FAQ Page - Mobile]()
+
+## FAQ Page - Desktop
+
+![FAQ Page - Desktop]()
+
+## My Profile Page - Mobile
+
+![Profile Page - Mobile]()
+
+## My Profile Page - Desktop
+
+![Profile Page - Desktop]()
+
+## Product Management Page - Mobile
+
+![Product Management Page - Mobile]()
+
+## Product Management Page - Desktop
+
+![Product Management Page - Desktop]()
+
+# Credits
+
+### General
+
+* [Canva](https://www.canva.com/) - or creating and designing the logo
+
+* [Balsamiq](https://balsamiq.com/wireframes/) - for creating the wireframes
+
+* [Gitpod](https://www.gitpod.io/) - For working/completing on my project
+
+* [Github](https://github.com/) - To store my project online
+
+* [Heroku](https://id.heroku.com/login) - For deploying the project and storing the env variables.
+
+* [Django Secret Key Generator](https://djecrety.ir/) - For generating a Django secret key.
+
+* [Rgb color code website](https://rgbcolorcode.com/) - For choosing colours
+
+* [Readme Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links) - For markdown documentation for the ReadMe
+
+* [ChatGPT](https://openai.com/index/chatgpt/) - For general debugging and spotting basic syntax errors such as urls not working.
+
+* [Am I responsive](https://ui.dev/amiresponsive) - For testing responsiveness and also for taking screenshots of the different pages on the website.
+
+### Images
+
+* [Pexels](https://www.pexels.com/photo/photo-of-building-in-chetham-manchester-11856438/) - For the food product images
+
+* [Pixabay](https://pixabay.com/) - For the food product images
+
+* [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer.
+
+### Validators/Testing
+
+* [HTML Validator](https://validator.w3.org/) - HTML Validator
+
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) - CSS Validator
+
+* [PEP8 Python Validator](https://pep8ci.herokuapp.com/#) - Python Validator
+
+* [JS Hint](https://jshint.com/) - For validating my Javascript code
+
+* [Page speed Insights/Lighthouse](https://pagespeed.web.dev/) - For testing performance, accessibility, best practices and SEO on all pages I used a website called Page Speed Insights
+
+### Content/Documentation
+
+* For sorting out the whitespace under the footer issue I used some of the code on [this webpage](https://www.30secondsofcode.org/css/s/footer-at-the-bottom/). The website is called the 30 seconds of code website and the page is about the footer being on the bottom.
+
+* [Django website](https://www.djangoproject.com/) - For Django documentation
+
+* [W3 schools](https://www.w3schools.com/) - For general documentation
+
+* [Bootstrap 4](https://getbootstrap.com/docs/4.0/layout/grid/) - For the relevant documentation
+
+* All content for the products were written myself.
+
+* This project was based on the Boutique Ado Walkthrough on the LMS as the Code Institute with additional features in and customised to my own project.
+
+## Acknowledgements
+
+A big thanks to the support from my mentor at the Code Institute, my facilitator at the City of Bristol College, and the Code Institute Slack Community and Tutor Support for assistant on my Milestone 4 project.
 
 ## Deployment to Heroku
 
