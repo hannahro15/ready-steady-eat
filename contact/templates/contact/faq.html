@@ -4,16 +4,16 @@
 
 {% block content %}
 
-  <div class="faq-container text-center">
+  <div class="faq-container text-center mb-20">
     <h1 class="text-center page-titles">
       Frequently Asked Questions
     </h1>
     <p class="text-center page-subtitles">
       Find all of your most frequently asked questions below.
     </p>
-    <div class="row d-flex">
+    <div class="row">
       {% for faq in faq_list %}
-      <div class="col-sm-6 mb-4 ml-4 text-center">
+      <div class="col-12 col-md-4 mb-2 mt-2 mx-2 ml-100 text-center">
         <div class="card h-100 faq-card border-dark">
           <div class="card-body">
             <h2 class="card-title">
