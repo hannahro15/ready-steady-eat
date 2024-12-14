@@ -4,44 +4,44 @@
 
 {% block content %}
 
-  <div class="faq-container">
+  <div class="faq-container text-center">
     <h1 class="text-center page-titles">
       Frequently Asked Questions
     </h1>
     <p class="text-center page-subtitles">
       Find all of your most frequently asked questions below.
     </p>
-    <div class="row">
+    <div class="row d-flex">
       {% for faq in faq_list %}
-        <div class="card-container col-12">
-          <div class="card h-100 faq-card border-dark">
-            <div class="card-body">
-              <h2 class="card-title">
-                Question:
-              </h2>
-              <p class="card-text">
-                {{ faq.question }}
-              </p>
-              <h2 class="card-title">
-                Answer:
-              </h2>
-              <p class="card-text">
-                {{ faq.answer }}
-              </p>
-              <hr>
-              {% if request.user.is_superuser %}
-                <a class="btn btn-info" href="{% url 'edit_faq' faq.id %}">Edit</a>
-                <a class="btn btn-danger" href="{% url 'delete_faq' faq.id %}">Delete</a>
-              {% endif %}
-            </div>
+      <div class="col-sm-6 mb-4 ml-4 text-center">
+        <div class="card h-100 faq-card border-dark">
+          <div class="card-body">
+            <h2 class="card-title">
+              Question:
+            </h2>
+            <p class="card-text">
+              {{ faq.question }}
+            </p>
+            <h2 class="card-title">
+              Answer:
+            </h2>
+            <p class="card-text">
+              {{ faq.answer }}
+            </p>
+            <hr>
+            {% if request.user.is_superuser %}
+            <a class="btn btn-secondary" href="{% url 'edit_faq' faq.id %}">Edit</a>
+            <a class="btn btn-danger" href="{% url 'delete_faq' faq.id %}">Delete</a>
+            {% endif %}
           </div>
         </div>
+      </div>
       {% endfor %}
-      {% if request.user.is_superuser %}
-        <div>
-           <a class="btn btn-dark" href="{% url 'add_faq' %}">+ Add FAQ</a>
-        </div>
-      {% endif %}
     </div>
+    {% if request.user.is_superuser %}
+      <div class="text-center mt-4">
+        <a class="btn btn-dark text-center" href="{% url 'add_faq' %}">+ Add FAQ</a>
+      </div>
+    {% endif %}
   </div>
-{% endblock content %}
+  {% endblock content %}

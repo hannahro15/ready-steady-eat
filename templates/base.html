@@ -6,6 +6,7 @@
   {% block meta %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Website where users can order food and ready meals online.">
   {% endblock %}
 
   {% block extra_meta %}
@@ -25,8 +26,7 @@
   <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+  
   <!-- Include Popper.js (required for positioning) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
@@ -34,7 +34,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Stripe -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
 
@@ -155,12 +154,13 @@
   {% endfor %}
 </div>
 {% endif %}
-
 <body>
+<div id="main-content" class="mb-5">
   {% block content %}
   {% endblock %}
-</body>
-<footer class="d-block w-100 text-center py-4">
+</div>
+
+<footer class="d-block text-center py-4 w-100">
   <!--Social links--->
   <h4 class="social-title text-uppercase text-light pt-10">Social Media Links</h4>
   <div id="social-links">
@@ -181,6 +181,7 @@
     <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
   </div>
 </footer>
+</body>
 
 {% block postloadjs %}
 <script type="text/javascript">

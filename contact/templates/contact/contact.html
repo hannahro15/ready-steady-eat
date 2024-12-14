@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+<div contact-container>
   <h1 class="text-center page-titles">Contact Us</h1>
   <p class="text-center page-subtitles">Please contact us if you have any queries regarding our online store.</p>
 
@@ -19,7 +20,7 @@
       <input type="number" class="form-control" id="phone" placeholder="Enter your Phone Number" required>
       <textarea class="form-control" id="text-area" placeholder="Please fill in any comments here..."
                 rows="5" required></textarea>
-  </div>
-      <button type="submit" class="submit_button btn btn-primary" id="submitButton">Submit</button>
+      <button type="submit" class="submit_button btn btn-dark text-center" id="submitButton">Submit</button> 
   </form>
+</div>
 {% endblock content %}
