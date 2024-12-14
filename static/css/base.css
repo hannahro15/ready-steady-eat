@@ -1,4 +1,4 @@
-body, html {
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -10,7 +10,12 @@ body, html {
 }
 
 .main-logo-link {
-    width: fit-content;
+    display: inline-block;
+}
+
+#main-content {
+    padding: 20px; 
+    flex-grow: 1;
 }
 
 .logo-image {
@@ -175,10 +180,11 @@ body, html {
 /* ------ Footer----- */
 
 footer {
-    margin-top: 30px;
+    margin-top: auto;
     background-color: green;
     width: 100%;
-    position: relative; 
+    position: relative;
+    padding: 20px;
   }
 
 .social-container {

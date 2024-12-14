@@ -1,8 +1,11 @@
-card {
-    width: 100px;
-    height: 100px;
-}
-
 .card-img {
     object-fit: cover;
+}
+
+.product-container {
+    padding-bottom: 50px; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }

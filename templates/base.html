@@ -26,7 +26,7 @@
   <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  
+
   <!-- Include Popper.js (required for positioning) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
@@ -42,146 +42,147 @@
 
   <title>Ready, Steady, Eat!</title>
 </head>
+
 <body>
-<header class="container-fluid">
-  <div id="topnav" class="row bg-white pt-lg-2">
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-start">
-      <a href="{% url 'home' %}" class="nav-link main-logo-link d-inline-block">
-        <img class="logo-image" src="{% static 'images/logo.png' %}" alt="Logo">
-      </a>
-    </div>
-    <div class="col-12 col-lg-4 my-auto py-1 text-center">
-      <h2 class="main-heading text-center mb-0">Ready, Steady, Eat!</h2>
-    </div>
-    <div class="col-12 col-lg-4 my-auto py-1 d-flex justify-content-center justify-content-lg-end">
-      <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-        <li class="list-inline-item dropdown">
-          <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            <div class="text-center">
-              <div><i class="fas fa-user fa-lg text-dark"></i></div>
-              <p class="my-0 text-dark">My Account</p>
+  <header class="container-fluid">
+    <div id="topnav" class="row bg-white pt-lg-2">
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-start">
+        <a href="{% url 'home' %}" class="nav-link main-logo-link d-inline-block">
+          <img class="logo-image" src="{% static 'images/logo.png' %}" alt="Logo">
+        </a>
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 text-center">
+        <h2 class="main-heading text-center mb-0">Ready, Steady, Eat!</h2>
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 d-flex justify-content-center justify-content-lg-end">
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <li class="list-inline-item dropdown">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-user fa-lg text-dark"></i></div>
+                <p class="my-0 text-dark">My Account</p>
+              </div>
+            </a>
+            <div class="dropdown-menu border-5" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
             </div>
-          </a>
-          <div class="dropdown-menu border-5" aria-labelledby="user-options">
-            {% if request.user.is_authenticated %}
-            {% if request.user.is_superuser %}
-            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-            {% endif %}
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-            {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-            {% endif %}
+          </li>
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link"
+              href="{% url 'view_bag' %}">
+              <div class="text-center">
+                <div><i class="fa fa-shopping-bag fa-lg text-dark"></i></div>
+                <p class="my-0 text-dark">
+                  {% if grand_total %}
+                  £{{ grand_total|floatformat:2 }}
+                  {% else %}
+                  £0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row w-100">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: green;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item text-uppercase">
+                <a class="nav-link text-light font-weight-bold" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown text-uppercase font-weight-bold">
+                <a class="nav-link dropdown-toggle text-light" id="productsDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Products</a>
+                <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}">All Products</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=nibbles">Nibbles</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=starters">Starters</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=main_courses">Main Courses</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=sides">Sides</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=desserts">Desserts</a>
+                  <a class="dropdown-item text-dark" href="{% url 'products' %}?category=party_food">Party Food</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'faq_page' %}">FAQ's</a>
+              </li>
+            </ul>
+            <form method="GET" action="" class="ml-auto">
+              <div class="input-group">
+                <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
+                <div class="input-group-append">
+                  <button class="btn btn-light rounded-0" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-        </li>
-        <li class="list-inline-item">
-          <a class="{% if grand_total %}text-info {% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-            <div class="text-center">
-              <div><i class="fa fa-shopping-bag fa-lg text-dark"></i></div>
-              <p class="my-0 text-dark">
-                {% if grand_total %}
-                £{{ grand_total|floatformat:2 }}
-                {% else %}
-                £0.00
-                {% endif %}
-              </p>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="row w-100">
-      <nav class="navbar navbar-expand-md navbar-light" style="background-color: green;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item text-uppercase">
-              <a class="nav-link text-light font-weight-bold" aria-current="page" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item dropdown text-uppercase font-weight-bold">
-              <a class="nav-link dropdown-toggle text-light" id="productsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">All Products</a>
-              <div class="dropdown-menu" aria-labelledby="productsDropdown">
-                <a class="dropdown-item text-dark" href="{% url 'products' %}">All Products</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=nibbles">Nibbles</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=starters">Starters</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=main_courses">Main Courses</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=sides">Sides</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=desserts">Desserts</a>
-                <a class="dropdown-item text-dark" href="{% url 'products' %}?category=party_food">Party Food</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'contact' %}">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'faq_page' %}">FAQ's</a>
-            </li>
-          </ul>
-          <form method="GET" action="" class="ml-auto">
-            <div class="input-group">
-              <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
-              <div class="input-group-append">
-                <button class="btn btn-light rounded-0" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
   </header>
 
-{% if messages %}
-<div class="message-container">
-  {% for message in messages %}
-  {% with message.level as level %}
-  {% if level == 40 %}
-  {% include 'includes/toasts/toast_error.html' %}
-  {% elif level == 30 %}
-  {% include 'includes/toasts/toast_warning.html' %}
-  {% elif level == 25 %}
-  {% include 'includes/toasts/toast_success.html' %}
-  {% else %}
-  {% include 'includes/toasts/toast_info.html' %}
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
   {% endif %}
-  {% endwith %}
-  {% endfor %}
-</div>
-{% endif %}
 
-<div id="main-content" class="mb-5">
-  {% block content %}
-  {% endblock %}
-</div>
+    {% block content %}
+    {% endblock %}
 
-<footer class="d-block text-center py-4 w-100">
-  <!--Social links--->
-  <h4 class="social-title text-uppercase text-light pt-10">Social Media Links</h4>
-  <div id="social-links">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page" class="mx-2">
-      <i class="fa fa-facebook text-light"></i>
-    </a>
-    <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page" class="mx-2">
-      <i class="fa fa-twitter text-light"></i>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page" class="mx-2">
-      <i class="fa fa-instagram text-light"></i>
-    </a>
-    <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel" class="mx-2">
-      <i class="fa fa-youtube text-light"></i>
-    </a>
-  </div>
-  <div class="copyright-statement text-light">
-    <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
-  </div>
-</footer>
+
+  <footer class="d-block text-center py-4 w-100 pt-20">
+    <!--Social links--->
+    <h4 class="social-title text-uppercase text-light pt-10">Social Media Links</h4>
+    <div id="social-links">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Link to Facebook page" class="mx-2">
+        <i class="fa fa-facebook text-light"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" aria-label="Link to Twitter page" class="mx-2">
+        <i class="fa fa-twitter text-light"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Link to Instagram page" class="mx-2">
+        <i class="fa fa-instagram text-light"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="Link to Youtube channel" class="mx-2">
+        <i class="fa fa-youtube text-light"></i>
+      </a>
+    </div>
+    <div class="copyright-statement text-light">
+      <p><em id="copyright">Copyright @2024 | Ready Steady Eat | All Rights Reserved.</em></p>
+    </div>
+  </footer>
 </body>
 
 {% block postloadjs %}
