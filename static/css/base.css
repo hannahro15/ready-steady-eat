@@ -5,10 +5,6 @@ body, html {
     flex-direction: column;
   }
 
-header {
-    position: fixed;
-}
-
 .main-heading {
     font-family: sans-serif;
 }

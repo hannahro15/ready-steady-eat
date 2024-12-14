@@ -13,21 +13,13 @@
     </p>
     <div class="row">
       {% for faq in faq_list %}
-      <div class="col-12 col-md-4 mb-2 mt-2 mx-2 ml-100 text-center">
+      <div class="col-12 col-md-4 mb-2 mt-2 mx-auto">
         <div class="card h-100 faq-card border-dark shadow p-2 bg-light">
           <div class="card-body">
-            <h2 class="card-title">
-              Question:
-            </h2>
-            <p class="card-text">
-              {{ faq.question }}
-            </p>
-            <h2 class="card-title">
-              Answer:
-            </h2>
-            <p class="card-text">
-              {{ faq.answer }}
-            </p>
+            <h2 class="card-title">Question: </h2>
+            <p class="card-text">{{ faq.question }}</p>
+            <h2 class="card-title">Answer: </h2>
+            <p class="card-text">{{ faq.answer }}</p>
             <hr>
             {% if request.user.is_superuser %}
             <a class="btn btn-secondary" href="{% url 'edit_faq' faq.id %}">Edit</a>
