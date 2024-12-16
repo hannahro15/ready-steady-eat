@@ -1,5 +1,4 @@
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
 }
 
@@ -18,4 +17,12 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
+}
+
+.profile-container {
+    min-height: 100px;
+}
+
+footer {
+    width: 100%;
 }

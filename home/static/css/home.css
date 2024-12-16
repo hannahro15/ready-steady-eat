@@ -2,12 +2,12 @@
    padding-top: 20px;
 }
 
-.home-image img {
-    width: 5rem;
+.home-image {
+    width: 40px;
     height: auto;
     margin: 0 auto;
     padding-left: 10px;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 .home-paragraph {
