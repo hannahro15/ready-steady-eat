@@ -75,3 +75,9 @@ def delete_faq(request, faq_id):
     faq.delete()
     messages.success(request, 'FAQ deleted!')
     return redirect('faq_page')
+
+def submit_contact_form(request):
+    """ Submit contact form """
+    form = ContactForm(request.POST, request.FILES)
+    return render(request, 'contact/contact.html' ,{'form': form})
+

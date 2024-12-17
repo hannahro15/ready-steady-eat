@@ -6,7 +6,6 @@
 <div class="contact-container">
   <h1 class="text-center page-titles">Contact Us</h1>
   <p class="text-center page-subtitles">Please contact us if you have any queries regarding our online store.</p>
-
   <form id="contactForm" class="col-12 col-md-8 mx-auto">
     <div class="mb-2">
       <input type="text" class="form-control" id="firstName" placeholder="Enter your First name" required>
@@ -26,5 +25,12 @@
     </div>
       <button type="submit" class="submit_button btn btn-dark text-center mt-10" id="submitButton">Submit</button> 
   </form>
+
+
+  <form method ="POST" action="{% url 'submit_contact_form'}" enctype="multipart/form-data" id="contactForm" class="col-12 col-md-8 mx-auto" >
+    {{ form }}
+
+  </form>
+  <button type="submit">Submit</button>
 </div>
 {% endblock content %}
