@@ -1,12 +1,26 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Faq
-from .forms import FaqForm
+from .forms import FaqForm, ContactForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def contact(request):
-    return render(request, 'contact/contact.html')
+    """ Submit contact form """
+    if request.method == "POST":
+        form = ContactForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully sent contact form info!')    
+            return redirect('success')
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact/contact.html' ,{'form': form})
+
+def success(request):
+    """ View for successfully sent contact forms! """
+    return render(request, 'contact/success.html')
 
 
 def faq_page(request):
@@ -76,8 +90,5 @@ def delete_faq(request, faq_id):
     messages.success(request, 'FAQ deleted!')
     return redirect('faq_page')
 
-def submit_contact_form(request):
-    """ Submit contact form """
-    form = ContactForm(request.POST, request.FILES)
-    return render(request, 'contact/contact.html' ,{'form': form})
+
 
