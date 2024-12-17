@@ -10,7 +10,7 @@
     {% csrf_token %}
     {{ form }}
     <br>
-    <button type="submit" class="text-center btn btn-dark" href="{% url 'success' %}">Submit</button>
+    <a type="submit" class="text-center btn btn-dark" href="{% url 'success' %}">Submit</a>
   </form>
 </div>
 {% endblock content %}
