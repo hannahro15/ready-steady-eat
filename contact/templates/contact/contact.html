@@ -6,7 +6,7 @@
 <div class="contact-container">
   <h1 class="text-center page-titles">Contact Us</h1>
   <p class="text-center page-subtitles">Please contact us if you have any queries regarding our online store.</p>
-  <form method ="POST" action="{% url 'success' %}" enctype="multipart/form-data" id="contactForm" class="col-12 col-md-8 mx-auto" >
+  <form method ="POST" action="{% url 'contact' %}" enctype="multipart/form-data" id="contactForm" class="col-12 col-md-8 mx-auto" >
     {% csrf_token %}
     {{ form }}
     <br>
