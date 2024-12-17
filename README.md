@@ -59,6 +59,10 @@
 
 ## Database Schema
 
+# Technologies Used
+
+The technologies I used for creating the project were HTML, CSS, Javascript, JQuery, Python, Django, Bootstrap 4, AWS, Heroku, Github, Git, and the Stripe API.
+
 # Features
 
 ## Home Page
@@ -124,8 +128,8 @@ Where the admins are can manage products in the shop.
 
 - Add a rating and reviews system
 - Add in more products to the site
-- Add a wishist
-- Set up a subscribe field for a monthly newsletter
+- Add a wishlist
+- Set up a subscribe option with a monthly newsletter
 
 # Testing
 
@@ -278,6 +282,10 @@ Where the admins are can manage products in the shop.
 * [W3 schools](https://www.w3schools.com/) - For general documentation
 
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/layout/grid/) - For the relevant documentation
+
+* For the django contact form views - [Django contact form views](https://mailtrap.io/blog/django-contact-form/#How-to-validate-and-verify-data-from-a-contact-form)
+
+* For styling the django contact form - [Django contact form styling](https://medium.com/swlh/how-to-style-your-django-forms-7e8463aae4fa)
 
 * All content for the products were written myself.
 
