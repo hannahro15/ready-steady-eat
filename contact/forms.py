@@ -13,15 +13,15 @@ class ContactForm(forms.ModelForm):
     
     class Meta:
         model = Contact
-        fields = ['firstName', 'lastName', 'email', 'phone', 'comments']
+        fields = ['first_name', 'last_name', 'email', 'phone', 'comments']
         widgets = {
-            'firstName': TextInput(attrs={
+            'first_name': TextInput(attrs={
                 'class': "form-control",
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
                 'placeholder': 'First Name'
                 }),
 
-            'lastName': TextInput(attrs={
+            'last_name': TextInput(attrs={
                 'class': "form-control",
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
                 'placeholder': 'Last Name'

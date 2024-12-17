@@ -4,8 +4,8 @@ from django.conf import settings
 # Create your models here.
 
 class Contact(models.Model):
-        firstName = models.CharField(max_length=250, null=False, blank=True)
-        lastName = models.CharField(max_length=250, null=False, blank=True)
+        first_name = models.CharField(max_length=250, null=False, blank=True)
+        last_name = models.CharField(max_length=250, null=False, blank=True)
         email = models.EmailField(max_length=250, null=False, blank=True)
         phone = models.IntegerField(null=False, blank=True)
         comments = models.TextField(max_length=250, null=False, blank=True)
