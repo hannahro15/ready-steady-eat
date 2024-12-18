@@ -124,7 +124,7 @@
                 <a class="nav-link text-uppercase text-light font-weight-bold" href="{% url 'faq_page' %}">FAQ's</a>
               </li>
             </ul>
-            <form method="GET" action="" class="ml-auto">
+            <form method="GET" action="{% url 'products' %}" class="ml-auto">
               <div class="input-group">
                 <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
                 <div class="input-group-append">
