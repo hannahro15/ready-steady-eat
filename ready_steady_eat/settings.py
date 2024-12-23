@@ -29,11 +29,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ready-steady-eat-8febfd678f9f.herokuapp.com', '8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1',]
+ALLOWED_HOSTS = ['ready-steady-eat-8febfd678f9f.herokuapp.com', 
+'8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net', 
+'localhost', '127.0.0.1',]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-hannahro15-readysteadye-pmisdgf4v8l.ws.codeinstitute-ide.net',
-    'https://ready-steady-eat-8febfd678f9f.herokuapp.com',  
+    'https://ready-steady-eat-8febfd678f9f.herokuapp.com',
 ]
 
 # Application definition
@@ -85,13 +87,13 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.static',
                 'bag.contexts.bag_contents',
             ],
-        'builtins': [
+            'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
             ]
