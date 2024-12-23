@@ -137,13 +137,13 @@ Where the admins are can manage products in the shop.
 
 ### Fixed bugs 
 
-- Fixed footer being at the bottom of the page.
+- Fixed footer so it is at the bottom of the page.
 - Made images all the same size so it looks more uniform in the product containers
+- Footer overlapping content in page on some pages.
 
 ### Unfixed bugs 
 
 - Images a little slow loading the page.
-- Footer overlapping content in page on some pages.
 
 ## Validation
 
@@ -167,67 +167,43 @@ Where the admins are can manage products in the shop.
 
 ## Home Page - Mobile
 
-![Home Page - Mobile]()
+![Home Page - Mobile](documentation/lighthouse/lighthouse-home-mobile.png)
 
 ## Home Page - Desktop
 
-![Home Page - Desktop]()
+![Home Page - Desktop](documentation/lighthouse/lighthouse-home-desktop.png)
 
 ## All Products Page - Mobile
 
-![All Products Page - Mobile]()
+![All Products Page - Mobile](documentation/lighthouse/lighthouse-products-mobile.png)
 
 ## All Products Page - Desktop
 
-![All Products Page - Desktop]()
+![All Products Page - Desktop](documentation/lighthouse/lighthouse-products-desktop.png)
 
-## My Basket Page - Mobile
+## My Basket/Shopping Bag Page - Mobile
 
-![My Basket - Mobile]()
+![My Basket - Mobile](documentation/lighthouse/lighthouse-bag-mobile.png)
 
-## My Basket Page - Desktop
+## My Baske/Shoopping Bag Page - Desktop
 
-![My Basket - Desktop]()
-
-## Checkout Page - Mobile
-
-![Checkout Page - Mobile]()
-
-## Checkout Page - Desktop
-
-![Checkout Page - Desktop]()
+![My Basket - Desktop](documentation/lighthouse/lighthouse-bag-desktop.png)
 
 ## Contact Page - Mobile
 
-![Contact Page - Mobile]()
+![Contact Page - Mobile](documentation/lighthouse/lighthouse-contact-mobile.png)
 
 ## Contact Page - Desktop
 
-![Contact Page - Desktop]()
+![Contact Page - Desktop](documentation/lighthouse/lighthouse-contact-desktop.png)
 
 ## FAQ Page - Mobile
 
-![FAQ Page - Mobile]()
+![FAQ Page - Mobile](documentation/lighthouse/lighthouse-faq-mobile.png)
 
 ## FAQ Page - Desktop
 
-![FAQ Page - Desktop]()
-
-## My Profile Page - Mobile
-
-![Profile Page - Mobile]()
-
-## My Profile Page - Desktop
-
-![Profile Page - Desktop]()
-
-## Product Management Page - Mobile
-
-![Product Management Page - Mobile]()
-
-## Product Management Page - Desktop
-
-![Product Management Page - Desktop]()
+![FAQ Page - Desktop](documentation/lighthouse/lighthouse-faq-desktop.png)
 
 # Credits
 
