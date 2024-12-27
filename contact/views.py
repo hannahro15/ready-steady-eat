@@ -67,7 +67,7 @@ def edit_faq(request, faq_id):
             messages.success(request, 'Successfully updated FAQ!')
             return redirect('faq_page')
         else:
-            messages.error(request, 'Failed to update FAQ. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update FAQ.')
     else:
         form = FaqForm(instance=faq)
 

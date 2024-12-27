@@ -79,9 +79,10 @@ def checkout(request):
                 except Product.DoesNotExist:
                     messages.error(
                         request, (
-                    "One of the products in your bag wasn't found in our database. "
-                    "Please call us for assistance!")
-                    )
+                            "One of the products in your bag wasn't found in "
+                            "our database. "
+                            "Please call us for assistance!")
+                         )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
@@ -127,14 +128,15 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        message.warning(
+        messages.warning(
             request, 
-            'Stripe public key is missing. Did you forget to set it in your environment?')
+            'Stripe public key is missing. Did you forget to set it in '
+            'your environment?')
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51QBJ5TBaBQcHlw4ln0060RxD947y8RtSycuM9Q22qDso6X77Mqmugf7AkCP6uoJ1cLmI8XVzJEuZKi4HDOy46Hvo00vIt6U4oG',
+        'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
 

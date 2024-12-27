@@ -4,13 +4,12 @@ from django.forms import ModelForm, TextInput, EmailInput
 
 
 class FaqForm(forms.ModelForm):
-
     class Meta:
         model = Faq
         fields = ['question', 'answer']
 
+
 class ContactForm(forms.ModelForm):
-    
     class Meta:
         model = Contact
         fields = ['first_name', 'last_name', 'email', 'phone', 'comments']
@@ -20,19 +19,16 @@ class ContactForm(forms.ModelForm):
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
                 'placeholder': 'First Name'
                 }),
-
             'last_name': TextInput(attrs={
                 'class': "form-control",
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
                 'placeholder': 'Last Name'
-                }),
-            
+                }),                         
             'email': EmailInput(attrs={
-                'class': "form-control", 
+                'class': "form-control",
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
                 'placeholder': 'Email'
                 }),
-
             'phone': TextInput(attrs={
                 'class': "form-control",
                 'style': 'max-width: 1000px; margin-bottom: 10px;',
