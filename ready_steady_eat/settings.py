@@ -59,7 +59,14 @@ INSTALLED_APPS = [
     'contact',
     'crispy_forms',
     'crispy_bootstrap5',
+    'django_extensions'
 ]
+
+GRAPH_MODELS = {
+    'all_applciations': False,
+    'group_models': True,
+    'app_labels': ["bag", "checkout", "home", "products", "profiles", "contact"],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

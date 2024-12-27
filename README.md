@@ -57,7 +57,13 @@
 ### FAQ Page - Desktop
 ![FAQ Page - Desktop](wireframes/faq-desktop.png)
 
-## Database Schema
+# Database Schema
+
+Please see below a screenshot of a Database Schema for my models of my project which I created using Django-extensions and PygraphViz.
+
+![Database Schema](documentation/models.png)
+
+As you can see from the model above, my two custom models that I created were the contact form and the FAQ's, which are both within the contact app. Not all apps used models so I removed these off the Schema.
 
 # Technologies Used
 
