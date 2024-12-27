@@ -15,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -47,7 +48,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
