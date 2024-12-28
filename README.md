@@ -159,7 +159,9 @@ Where the admins are can manage products in the shop.
 
 ### CSS Validation
 
-![]()
+I have validated all the css files within each of the apps and I can confirm there were no errors and everything is validated.
+
+![CSS Validation Screenshot](documentation/validation/css-validation-screenshot.png)
 
 ### JS Validation
 
