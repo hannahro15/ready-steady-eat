@@ -150,6 +150,8 @@ Where the admins are can manage products in the shop.
 ### Unfixed bugs 
 
 - Images a little slow loading the page.
+- Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure.
+- Small responsiveness issue on the bag page on mobile devices.
 
 ## Validation
 
@@ -244,6 +246,8 @@ I have validated all the css files within each of the apps and I can confirm the
 * [Pixabay](https://pixabay.com/) - For the food product images
 
 * [Font Awesome](https://fontawesome.com/icons) - For the icons used for the social links in the footer.
+
+* [Croppola](https://croppola.com/) - For cropping and re-sizing the food images so they are all the same height and width.
 
 ### Validators/Testing
 
