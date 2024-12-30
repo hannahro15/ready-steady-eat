@@ -184,7 +184,7 @@ footer {
     background-color: green;
     width: 100%;
     position: relative;
-    padding: 20px;
+    padding: 10px;
   }
 
 .social-container {
@@ -195,6 +195,10 @@ footer {
 .social-title {
     font-weight: bold;
     font-size: 15px;
+}
+
+#social-links {
+    padding-bottom: 10px;
 }
 
 /* Product Form */
