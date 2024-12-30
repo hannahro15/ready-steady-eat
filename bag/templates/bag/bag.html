@@ -29,6 +29,7 @@
                         <thead class="text-black">
                             <tr>
                                 <th scope="col">Product Info</th>
+                                <th scope="col"></th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Qty</th>
                                 <th scope="col">Subtotal</th>
@@ -37,14 +38,13 @@
                         {% for item in bag_items %}
                             <tr>
                                 <td class="col-12 col-sm-6 col-md-3 py-3">
+                                    <img class="img-fluid w-70 rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                </td>
+                                <td class="col-12 col-sm-6 col-md-3 py-3">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <img class="img-fluid w-70 rounded" src="{{ item.product.image.url }}" alt="{{product.name}}">
                                 </td>
                                 <td class="col-12 col-sm-6 col-md-3 py-3">
-                                    <p class="my-0">£{{ item.product.price }}</p>
-                                </td>
-                                <td class="col-12 col-sm-6 col-md-3 py-3">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                    <p class="my-0">{{ item.product.price }}</p>
                                 </td>
                                 <td class=" col-12 col-sm-6 col-md-3 py-3">
                                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
