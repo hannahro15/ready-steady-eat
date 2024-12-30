@@ -59,7 +59,7 @@
 
 # Database Schema
 
-Please see below a screenshot of a Database Schema for my models of my project which I created using Django-extensions and PygraphViz.
+Please see below a screenshot of a Database Schema for my models of my project which I created using Django-extensions and PygraphViz. I found about this via the Code Institute Slack Channel.
 
 ![Database Schema](documentation/models.png)
 
@@ -160,7 +160,7 @@ Where the admins are can manage products in the shop.
 
 I have validated all the html files (not the all auth ones) by copying the url in the html validator, and can confirm the are without errors. 
 
-![]()
+![HTML Validator Screenshot](documentation/validation/html-validator.png)
 
 HTML Validation Checks Below:
 
