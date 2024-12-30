@@ -146,18 +146,44 @@ Where the admins are can manage products in the shop.
 - Fixed footer so it is at the bottom of the page.
 - Made images all the same size so it looks more uniform in the product containers
 - Footer overlapping content in page on some pages.
+- Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure. Samll fix within the template tags in the html.
 
 ### Unfixed bugs 
 
 - Images a little slow loading the page.
-- Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure.
 - Small responsiveness issue on the bag page on mobile devices.
+- Order confirmation email doesn't actually send to an email but confirmation message appears on the checkout success page.Emails are received ok for verfication when registering and also for forgotting a password. This was checked using a temp email address on https://temp-mail.org/en/.
 
 ## Validation
 
 ### HTML Validation
 
+I have validated all the html files (not the all auth ones) by copying the url in the html validator, and can confirm the are without errors. 
+
 ![]()
+
+HTML Validation Checks Below:
+
+| Page      | Checked with HTML Validator with no errors (Yes or No)  |
+| ------    | ------- |
+| index.html | Yes |
+| profile.html | Yes |
+| register.html | Yes |
+| login.html | Yes |
+| products.html | Yes |
+| product_detail.html | Yes | 
+| bag.html | Yes |
+| checkout.html | Yes |
+| checkout_success.html | Yes | 
+| contact.html | Yes (Errors only from the backend) |
+| success.html (contact form success page) | Yes |
+| add_product.html (on product management page) | Yes |
+| edit_product.html | Yes |
+| faq.html | Yes |
+| add_faq.html | Yes |
+| edit_faq.html | Yes |
+
+Errors on the contact page due to the fact that the contact form is like a table and it is coming from the backend.
 
 ### CSS Validation
 
