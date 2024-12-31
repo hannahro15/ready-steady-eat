@@ -159,12 +159,12 @@ Where the admins are can manage products in the shop. There are also from the pr
 - Made images all the same size so it looks more uniform in the product containers
 - Footer overlapping content in page on some pages.
 - Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure. Samll fix within the template tags in the html.
+- Small responsiveness issue on the bag page on mobile devices.
 
 ### Unfixed bugs 
 
 - Images a little slow loading the page.
-- Small responsiveness issue on the bag page on mobile devices.
-- Order confirmation email doesn't actually send to an email but confirmation message appears on the checkout success page.Emails are received ok for verfication when registering and also for forgotting a password. This was checked using a temp email address on https://temp-mail.org/en/.
+- Order confirmation email doesn't actually send to an email but confirmation message does appear on the checkout success page once order is placed. Emails are received ok for verification when registering and also for forgotting a password. This was checked using a temp email address on https://temp-mail.org/en/.
 
 ## Validation
 
@@ -344,7 +344,7 @@ Through testing my app during the development stage these are the testing result
 
 * All content for the products were written myself.
 
-* This project was based on the Boutique Ado Walkthrough on the LMS as the Code Institute with additional features in and customised to my own project.
+* This project was based on the Boutique Ado Walkthrough on the LMS as the Code Institute with additional features in and customised to my own project by adding in a contact app that has a contact and faq page with models for both of them.
 
 ## Acknowledgements
 
