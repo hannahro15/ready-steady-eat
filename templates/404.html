@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="error-page text-center">
+    <h1>404</h1>
+    <p>Oops! This page cannot be found.</p>
+    <a href="{% url 'home' %}">Go Back to the home page!</a>
+</div>
+{% endblock %}
