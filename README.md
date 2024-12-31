@@ -73,62 +73,69 @@ The technologies I used for creating the project were HTML, CSS, Javascript, JQu
 
 ## Home Page
 
-![Home Page]()
+![Home Page](documentation/site-photos/home-screenshot.png)
 
 A home page introducing the website and it's purpose for users.
 
 ## All Products Page
 
-![All Products Page]()
+![All Products Page](documentation/site-photos/products-screenshot.png)
 
 A page where all the products are shown.
 
-## Individual Product Pages
+## Individual Product Pages (This is for the main courses!)
 
-![Nibbles]()
-![Starters]()
-![Main Courses]()
-![Sides]()
-![Desserts]()
-![Party Food]()
+![Main Courses](documentation/site-photos/individual-product-page-screenshot.png)
 
 Pages where products for different categories are shown.
 
-## My Basket Page
+## My Shopping Bag Page
 
-![My Basket]()
+![My Bag](documentation/site-photos/bag-screenshot.png)
 
 A page where users can see their items before going to the checkout page.
 
 ## Checkout Page
 
-![Checkout Page]()
+![Checkout Page](documentation/site-photos/checkout-screenshot.png)
 
-Where users checkout and pay for items.
+Where users checkout and pay for items. The screenshot doesn't show the payment bit which is lower down on the page!
 
 ## Contact Page
 
-![Contact Page]()
+![Contact Page](documentation/site-photos/contact-screenshot.png)
 
 Where users can contact Ready, Steady, Eat! with queries.
 
 ## FAQ Page
 
-![FAQ Page]()
+Non-admin photos for this.
+![FAQ Page](documentation/site-photos/faq-screenshot.png)
+
+With the edit and delete and add FAQ's for admin.
+![FAQ Page](documentation/site-photos/faq-admin-screenshot.png)
 
 Where users can see frequently asked questions. There are options from this page for admin's to add, edit and remove faq's.
 
 ## My Profile Page
 
-![Profile Page]()
+![Profile Page](documentation/site-photos/profile-screenshot.png)
 
 Where you users have access to their own profile.
 
-## Product Management Page
+## Product Management Page (For adding products)
 
-![Product Management page]()
+![Product Management page](documentation/site-photos/add-product-screenshot.png)
 
-Where the admins are can manage products in the shop.
+Where the admins are can manage products in the shop. There are also from the products page when logged in as an admin an option to edit products which has a very similar looking form.
+
+## Sign Up Page
+
+![Sign Up](documentation/site-photos/sign-up-screenshot.png)
+
+## Sign In Page
+
+![ Sign In](documentation/site-photos/sign-in-screenshot.png)
 
 ## Future Features
 
@@ -197,7 +204,7 @@ I have validated the JavaScript and everything runs without error, apart from so
 
 ### Python Validation
 
-![]()
+This is has been thoroughly tested using flake8 extension and the only errors that remained are mostly in settings.py and models which I have decided to ignore. All validation issues within views, urls etc. are all clear of errors.
 
 ## Google Lighthouse Testing
 
