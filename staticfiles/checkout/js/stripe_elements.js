@@ -32,7 +32,7 @@ card.mount('#card-element');
 
 // Handle real time validation errors on card element
 card.addEventListener('change', function (event) {
-    var errorDiv = document.getElementById('card-errors')
+    var errorDiv = document.getElementById('card-errors');
     if (event.error) {
         var html = `
                 <span class="icon" role="alert">
@@ -121,5 +121,5 @@ form.addEventListener('submit', function (ev) {
     }).fail(function () {
         // just reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });

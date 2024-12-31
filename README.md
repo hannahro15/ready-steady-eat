@@ -193,7 +193,7 @@ I have validated all the css files within each of the apps and I can confirm the
 
 ### JS Validation
 
-![]()
+I have validated the JavaScript and everything runs without error, apart from some ES6 ones which I have ignored.
 
 ### Python Validation
 
