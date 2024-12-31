@@ -1,6 +1,6 @@
 # Ready, Steady, Eat! (Milestone 4)
  
- An online food shop called Ready, Steady, Eat! that sells meals and fresh food products for my Milestone 4 project. This ia full-Stack Django e-commerce project.
+ An online food shop called Ready, Steady, Eat! that sells meals and fresh food products for my Milestone 4 project. This ia Full-Stack Django E-commerce project based on the Boutique Ado project. It is customised and contact and faq pages added in with models.
 
  # UX
 
@@ -63,7 +63,7 @@ Please see below a screenshot of a Database Schema for my models of my project w
 
 ![Database Schema](documentation/models.png)
 
-As you can see from the model above, my two custom models that I created were the contact form and the FAQ's, which are both within the contact app. Not all apps used models so I removed these off the Schema.
+As you can see from the model above, my two custom models that I created were the contact form and the FAQ's, which are both within the contact app. Not all apps used models so are not on the Schema.
 
 # Technologies Used
 
@@ -96,6 +96,7 @@ Pages where products for different categories are shown.
 A page where users can see their items before going to the checkout page.
 
 ## Checkout Page
+
 Checkout (top half)
 ![Checkout Page 1](documentation/site-photos/checkout-one-screenshot.png)
 
@@ -156,9 +157,9 @@ Where the admins are can manage products in the shop. There are also from the pr
 ### Fixed bugs 
 
 - Fixed footer so it is at the bottom of the page.
-- Made images all the same size so it looks more uniform in the product containers
+- Made images all the same size so it looks more uniform in the product containers.
 - Footer overlapping content in page on some pages.
-- Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure. Samll fix within the template tags in the html.
+- Order total showing zero amount on order confirmation and in profile after adding product to basket and going through the checkout procedure. Small fix within the template tags in the html.
 - Small responsiveness issue on the bag page on mobile devices.
 
 ### Unfixed bugs 
@@ -187,7 +188,7 @@ HTML Validation Checks Below:
 | bag.html | Yes |
 | checkout.html | Yes |
 | checkout_success.html | Yes | 
-| contact.html | Yes (Errors only from the backend) |
+| contact.html | Yes (Errors only from the backend as from details in forms.py) |
 | success.html (contact form success page) | Yes |
 | add_product.html (on product management page) | Yes |
 | edit_product.html | Yes |
@@ -209,7 +210,7 @@ I have validated the JavaScript and everything runs without error, apart from so
 
 ### Python Validation
 
-This is has been thoroughly tested using flake8 extension and the only errors that remained are mostly in settings.py and models which I have decided to ignore. All validation issues within views, urls etc. are all clear of errors.
+This is has been thoroughly tested using flake8 extension and the only errors that remained are mostly in settings.py and models which I have decided to ignore. All validation issues within views, urls etc. are all clear of errors. There are odd other errors, but these were issues that were originally from the Boutique Ado such as the 'except' error.
 
 ## Google Lighthouse Testing
 
@@ -262,7 +263,7 @@ Through testing my app during the development stage these are the testing result
  - As a user, I am able to log in to my account, so that I can see the relevant information on my account.
  - As a user, I am able to log out of my account to keep my account safe and secure.
  - As a user, I can confirm that I do receive a confirmation email after registering to confirm that my registration went through and was succesful.
- - As a user, if I forget my password I should easily be able to recover it, so I am able to access my account again and log in. This has been tested and an email sent for forgotten passwords.
+ - As a user, if I forget my password I can easily recover it, so I am able to access my account again and log in. This has been tested and an email sent for forgotten passwords.
  - As a user, I can confirm that I have a personalised profile so I can have access to my personal information, my orders, and update payment information.
 
  ### Food/Meal Products and Checkout
@@ -273,7 +274,7 @@ Through testing my app during the development stage these are the testing result
 - As a shopper, I can confirm that I can add and remove items from my cart.
 - As a shopper, I can confirm that I am able to edit quantity of items that are in my basket before I pay, so I can order the right amount of products that I need.
 - As a user I can confirm that I am able to add, edit, and delete product listings so I can update the website accordingly.
-- As a shopper, I expect the payment to go through succesfully without any errors, so that I can purchase what is in my basket. This goes through via Stripe on the backend.
+- As a shopper, I can confirm that the payment to go through succesfully without any errors, so that I can purchase what is in my basket. This goes through via Stripe on the backend.
 
 ### Other/General
 - As a user, it is clear what the purpose of the website is, what it is about, and what content is in it, so I can decide if I want to explore and view the website further.
