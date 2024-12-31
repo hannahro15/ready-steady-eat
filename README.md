@@ -73,7 +73,7 @@ The technologies I used for creating the project were HTML, CSS, Javascript, JQu
 
 ## Home Page
 
-![Home Page](documentation/site-photos/home-screenshot.png)
+![Home Page](documentation/site-photos/home-page-screenshot.png)
 
 A home page introducing the website and it's purpose for users.
 
