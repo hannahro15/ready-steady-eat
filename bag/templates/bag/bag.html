@@ -26,61 +26,58 @@
             {% if bag_items %}
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
-                        <thead class="text-black">
+                        <thead class="text-black d-none d-md-table-row w-100">
                             <tr>
-                                <th scope="col">Product Info</th>
-                                <th scope="col"></th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
+                                <th class="col-12 col-sm-6 col-md-3 col-lg-3">Product Info</th>
+                                <th class="col-12 col-sm-6 col-md-3 col-lg-3">Product Name</th>
+                                <th class="col-12 col-sm-6 col-md-2 col-lg-3">Price</th>
+                                <th class="col-12 col-sm-6 col-md-2 col-lg-3">Qty</th>
+                                <th class="col-12 col-sm-6 col-md-2 col-lg-3">Subtotal</th>
                             </tr>
                         </thead>
                         {% for item in bag_items %}
-                            <tr>
-                                <td class="col-12 col-sm-6 col-md-3 py-3">
-                                    <img class="img-fluid w-70 rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                </td>
-                                <td class="col-12 col-sm-6 col-md-3 py-3">
-                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                </td>
-                                <td class="col-12 col-sm-6 col-md-3 py-3">
-                                    <p class="my-0">{{ item.product.price }}</p>
-                                </td>
-                                <td class=" col-12 col-sm-6 col-md-3 py-3">
-                                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                        {% csrf_token %}
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                        <tr class="d-flex flex-column flex-sm-row w-100">
+                            <td class="d-flex col-12 col-sm-6 col-md-3 col-lg-3 px-3 align-items-center justify-content-center">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            </td>
+                            <td class="d-flex col-12 col-sm-6 col-md-3 col-lg-3 px-3">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            </td>
+                            <td class="d-flex col-12 col-sm-6 col-md-2 col-lg-2 px-3">
+                                <p class="my-0">£{{ item.product.price }}</p>
+                            </td>
+                            <td class="d-flex col-12 col-sm-6 col-md-2 col-lg-2 px-3">
+                                <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm btn-black rounded-0" 
                                                         data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-minus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <input class="form-control form-control-sm qty_input" type="number"
-                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                    data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}">
-                                                <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                    <span><i class="fas fa-minus fa-sm"></i></span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control form-control-sm qty_input" type="number"
+                                                   name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                   data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm btn-black rounded-0"
                                                         data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                        <span>
-                                                            <i class="fas fa-plus fa-sm"></i>
-                                                        </span>
-                                                    </button>
-                                                </div>
+                                                    <span><i class="fas fa-plus fa-sm"></i></span>
+                                                </button>
                                             </div>
                                         </div>
-                                    </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product-size="{{ item.size }}"><small>Remove</small></a>
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                </td>
-                            </tr>
+                                    </div>
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product-size="{{ item.size }}"><small>Remove</small></a>
+                                    </div>
+                                </form>
+                            </td>
+                            <td class="d-flex col-12 col-sm-6 col-md-2 col-lg-2 px-3 text-right w-100">
+                                <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </td>
+                        </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
