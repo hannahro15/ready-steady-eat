@@ -96,8 +96,11 @@ Pages where products for different categories are shown.
 A page where users can see their items before going to the checkout page.
 
 ## Checkout Page
+Checkout (top half)
+![Checkout Page 1](documentation/site-photos/checkout-one-screenshot.png)
 
-![Checkout Page](documentation/site-photos/checkout-screenshot.png)
+Checkout page (bottom half)
+![Checkout page 2](documentation/site-photos/checkout-two-screenshot.png)
 
 Where users checkout and pay for items. The screenshot doesn't show the payment bit which is lower down on the page!
 
